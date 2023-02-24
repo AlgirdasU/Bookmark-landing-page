@@ -1,0 +1,31 @@
+*,
+:after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+html {
+  font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--very-darkblue);
+  border-radius: 0.4rem;
+}
+
+::selection {
+  background-color: var(--very-darkblue);
+  color: var(--white);
+}
+
+body {
+  font-size: var(--par-font);
+  font-family: var(--major-font);
+}

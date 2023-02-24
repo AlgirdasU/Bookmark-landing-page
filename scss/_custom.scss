@@ -1,0 +1,19 @@
+// PRIMARY COLORS
+:root {
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+
+  // NEUTRAL
+  --white: #fff;
+  --grayish-blue: hsl(229, 8%, 60%);
+  --very-darkblue: hsl(229, 31%, 21%);
+
+  //TYPOGRAPHY
+  --par-font: 1.8rem;
+
+  //FONTS
+  --major-font: "Rubik", sans-serif;
+  --font-w-regular: 400;
+  --font-w-medium: 500;
+}
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
