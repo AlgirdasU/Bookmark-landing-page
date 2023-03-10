@@ -4,28 +4,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 html {
+  box-sizing: border-box;
   font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%
-}
-
-html:focus-within {
   scroll-behavior: smooth;
 }
 
-*:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.25rem var(--very-darkblue);
-  border-radius: 0.4rem;
-}
 
-::selection {
-  background-color: var(--very-darkblue);
-  color: var(--white);
-}
 
 body {
   font-size: var(--par-font);
   font-family: var(--major-font);
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+*:focus {
+  outline: 3px dashed #979bb3;
+  // box-shadow: 0 0 0 0.25rem #979bb3;
+  border-radius: 0.4rem;
+}
+
+::selection {
+  background-color: var(--very-dark-blue);
+  color: var(--white);
 }

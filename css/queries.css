@@ -1,0 +1,255 @@
+/* 360px */
+@media only screen and (min-width: 22.5em) {
+  .btn__chrome {
+    /* margin-right: 1.5rem; */
+  }
+}
+
+/* 400px */
+@media only screen and (min-width: 25em) {
+  .btn {
+    flex-direction: row;
+  }
+
+  .btn__chrome {
+    margin: 0 1.5rem 0 0;
+  }
+}
+
+/* 700px */
+@media only screen and (min-width: 43.75em) {
+  .hero {
+    padding-top: 8rem;
+  }
+
+  .nav__logo-desktop {
+    align-self: center;
+  }
+
+  .desktop-btn {
+    display: none;
+  }
+
+  .nav__mobile {
+    transform: translate(0);
+    position: static;
+    background-color: transparent;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav__logo-mobile {
+    display: none;
+  }
+
+  .nav__list {
+    margin-top: 0;
+    display: flex;
+    gap: 2.8rem;
+  }
+
+  .nav__item {
+    border: none;
+    padding: 0;
+  }
+  .nav__item:last-child {
+    border: none;
+    margin: 0;
+  }
+
+  .nav__link {
+    color: hsl(229, 6%, 38%);
+    text-transform: capitalize;
+    letter-spacing: 0.08rem;
+    font-size: 1.6rem;
+  }
+
+  .nav__login-btn {
+    border: 2px solid #E71818;
+    background-color: #E71818;
+    width: auto;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.6rem;
+    margin-left: 3.6rem;
+  }
+  .nav__login-btn:hover {
+    color: #E71818;
+  }
+
+  .nav__social-icons {
+    display: none;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .features__list {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    border-bottom: 1px solid hsl(229, 8%, 60%);
+    max-width: 68rem;
+  }
+
+  .features__tab-item {
+    border: 0;
+  }
+
+  .features__tab-item:last-child {
+    border: 0;
+  }
+
+  .features__tab-active::after {
+    width: 25rem;
+    height: 0.4rem;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -1px;
+    z-index: 10;
+  }
+}
+/* 770px */
+@media only screen and (min-width: 48.125em) {
+}
+
+/* 900px */
+@media only screen and (min-width: 56.25em) {
+
+.btn {
+  justify-content: flex-start;
+}
+
+  .hero__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero__img {
+    width: 120%;
+  }
+
+  .hero__text-box {
+    text-align: left;
+  }
+
+  .hero__illustration-box {
+    margin-bottom: 0;
+  }
+
+  .hero__paragraph {
+    max-width: 100%;
+  }
+
+  .hero__illustration-box::before {
+    content: "";
+    position: absolute;
+    background-color: hsl(231, 69%, 60%);
+    height: 70%;
+    width: 100%;
+    right: -19rem;
+    top: 30%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+    z-index: -1;
+  }
+  .features {
+    margin: 14rem 1rem 0;
+  }
+
+  .features__container {
+    flex-direction: row-reverse;
+    gap: 7rem;
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+
+  .features__illustration-box::after {
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+    top: 28%;
+  }
+  .features__text-box {
+    text-align: left;
+  }
+
+  .features__btn {
+    display: block;
+  }
+
+  .download {
+    margin: 14rem 1rem 0;
+  }
+
+  .contact form {
+    flex: 1;
+    max-width: 30rem;
+  }
+  .contact__email {
+    max-width: 30rem;
+  }
+
+  .contact__input-box {
+    display: flex;
+  }
+
+  .contact__btn {
+    width: fit-content;
+    margin: 0 !important;
+  }
+
+  .footer__container {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 110rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer__logo {
+    margin-right: 7rem;
+  }
+
+  .footer__list {
+    flex-direction: row;
+    flex: 1;
+    gap: 3.4rem;
+  }
+}
+
+/* 1000px */
+@media only screen and (min-width: 62.5em) {
+  .features__illustration-box::after {
+    border-top-right-radius: 22%;
+    border-bottom-right-radius: 22%;
+    top: 35%;
+  }
+
+  .extentions {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .extention--firefox {
+    margin-top: 4rem;
+  }
+
+  .extention--opera {
+    margin-top: 8rem;
+  }
+}
+
+/* 1200px */
+@media only screen and (min-width: 75em) {
+  .features__illustration-box::after {
+    border-top-right-radius: 22%;
+    border-bottom-right-radius: 22%;
+    left: -20%;
+    width: 100%;
+    top: 35%;
+  }
+}

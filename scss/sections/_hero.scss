@@ -1,0 +1,106 @@
+@use "../components/mixins" as *;
+
+.hero {
+  overflow: hidden;
+  padding-top: 7rem;
+  &__container {
+    max-width: 110rem;
+
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__text-box {
+    text-align: center;
+  }
+
+  &__paragraph {
+    color: var(--grayish-blue);
+    line-height: 1.6;
+    margin: 0 auto 3rem;
+    max-width: 54rem;
+  }
+
+  &__illustration-box {
+    max-width: 60rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 3rem;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: var(--soft-blue);
+      height: 70%;
+      width: 100%;
+      right: -23%;
+      top: 30%;
+      border-top-left-radius: 32%;
+      border-bottom-left-radius: 32%;
+      z-index: -1;
+    }
+  }
+
+  &__img {
+    max-width: 60rem;
+    width: 100%;
+  }
+
+  &__background {
+    background-color: var(--soft-blue);
+    max-width: 45rem;
+    max-height: 25rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header-primary {
+  font-size: clamp(2.8rem, 2rem + 3.2vw, 5rem);
+  color: var(--very-dark-blue);
+  font-weight: var(--font-w-medium);
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.6rem;
+  &__chrome {
+    @include btnCustom;
+    color: var(--white);
+    margin-bottom: 1.4rem;
+    border: 0.2rem solid var(--soft-blue);
+    background-color: var(--soft-blue);
+
+    &:hover {
+      border: 0.2rem solid var(--soft-blue);
+      background-color: var(--white);
+      color: var(--soft-blue);
+    }
+  }
+
+  &__firefox {
+    @include btnCustom;
+    color: var(--very-dark-blue);
+    border: 0.2rem solid var(--very-light-gray);
+    background-image: linear-gradient(
+      to right,
+      rgb(238, 238, 238) 0%,
+      #ffffff 51%,
+      rgb(238, 238, 238) 100%
+    );
+    transition: 0.5s;
+    background-size: 200% auto;
+
+    &:hover {
+      border: 0.2rem solid var(--grayish-blue);
+      background-position: right center;
+    }
+  }
+}

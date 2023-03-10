@@ -1,0 +1,142 @@
+.nav {
+  position: relative;
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 110rem;
+    padding: 3rem 1rem 0;
+    justify-content: space-between;
+  }
+
+  &__logo-mobile {
+    position: absolute;
+    left: 1rem;
+    top: 3rem;
+  }
+
+  &__mobile {
+    position: absolute;
+    background-color: rgba(37, 43, 70, 0.96);
+    left: 0;
+    top: 0;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    z-index: 100;
+    text-align: center;
+    transform: translate(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__list {
+    margin-top: 9rem;
+  }
+
+  &__item {
+    list-style: none;
+    padding: 2.1rem;
+    margin: 0 1rem;
+    border-top: 1px solid var(--grayish-blue);
+  }
+
+  &__item:last-child {
+    border-bottom: 1px solid var(--grayish-blue);
+    margin-bottom: 3rem;
+  }
+
+  &__link {
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    transition: all 150ms ease;
+
+    &:hover {
+      color: var(--soft-red);
+    }
+  }
+
+  &__login-btn {
+    padding: 1.2rem 1rem;
+    border: none;
+    background: none;
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: var(--font-w-medium);
+    letter-spacing: 0.2rem;
+    border: 2px solid var(--white);
+    border-radius: 0.5rem;
+    transition: all 150ms ease;
+    cursor: pointer;
+    display: block;
+    margin: 0 1rem;
+    width: calc(100% - 2rem);
+    &:hover {
+      background-color: var(--white);
+      color: var(--very-dark-blue);
+    }
+  }
+
+  &__social-icons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5rem;
+  }
+
+  &__icon {
+    height: 2.6rem;
+    width: 2.6rem;
+    color: var(--white);
+    cursor: pointer;
+    &:hover {
+      color: var(--soft-red);
+    }
+    &--facebook {
+      margin-right: 4rem;
+    }
+  }
+}
+
+.header.nav-open .nav__mobile {
+  transform: translate(0);
+  opacity: 1;
+  visibility: visible;
+  transition: all 100ms ease;
+}
+.menu-btn {
+  height: 2.2rem;
+  width: 2.2rem;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+  & svg {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+}
+.desktop-btn {
+  display: block;
+ 
+}
+
+.mobile-btn {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  display: none;
+ 
+}
+
+.header.nav-open .desktop-btn {
+  display: none;
+}
+
+.header.nav-open .mobile-btn {
+  display: block;
+}
+

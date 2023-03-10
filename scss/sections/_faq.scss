@@ -1,0 +1,101 @@
+@use "../components/mixins" as *;
+.faq {
+  margin: 0 auto 1rem;
+  text-align: center;
+  max-width: 54rem;
+
+  &__pragraph {
+    max-width: 54rem;
+    margin: 0 auto 5rem;
+    line-height: 1.6;
+    color: var(--grayish-blue);
+  }
+
+  &__accordion {
+    &--item {
+      border-bottom: 1px solid var(--grayish-blue);
+      margin: 0 1rem;
+
+      button {
+        position: relative;
+        border: none;
+        background: none;
+        outline: none;
+        max-width: 54rem;
+        width: 100%;
+        padding: 2.2rem 0;
+        font-size: inherit;
+        text-align: left;
+        color: var(--very-dark-blue);
+        font-weight: var(--font-w-medium);
+        transition: all 150ms ease;
+
+        &:hover {
+          cursor: pointer;
+          color: var(--soft-red);
+          background: transparent;
+
+          &::after {
+            cursor: pointer;
+            color: var(--very-dark-blue);
+          }
+        }
+      }
+    }
+
+    &--title {
+      padding: 1rem 1.5rem 1rem 1rem;
+      font-weight: var(--font-w-medium);
+    }
+
+    &--icon {
+      position: absolute;
+      top: 2.4rem;
+      right: 1rem;
+      transition: all 150ms;
+      height: 2.1rem;
+      width: 2.1rem;
+      color: var(--soft-blue);
+    }
+
+    &--content {
+      text-align: left;
+      height: 0;
+
+      opacity: 0;
+      overflow: hidden;
+      transition: all 180ms;
+    }
+
+    &--answer {
+      margin: 2rem 0;
+      font-size: var(--font-w-regular);
+      line-height: 2.7rem;
+      color: var(--grayish-blue);
+    }
+  }
+
+  &__btn {
+    @include btnCustom;
+    color: var(--white);
+    background-color: var(--soft-blue);
+    border: 2px solid var(--soft-blue);
+    margin-top: 4rem;
+
+    &:hover {
+      color: var(--soft-blue);
+      background-color: var(--white);
+      border: 2px solid var(--soft-blue);
+    }
+  }
+}
+.faq__accordion .faq__accordion--item.active .faq__accordion--content {
+  max-height: 30rem;
+  height: 100%;
+  opacity: 1;
+}
+
+.faq__accordion .faq__accordion--item.active .faq__accordion--icon {
+  transform: rotate(180deg);
+  color: var(--soft-red);
+}
